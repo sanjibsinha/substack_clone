@@ -1,3 +1,5 @@
+![The First Version](https://github.com/sanjibsinha/substack_clone/blob/main/Screenshot%20from%202025-01-15%2010-42-24.png)
+
 ## Step 1: Initialize the Project
 
 ### Backend (Django)
