@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ post.title }}</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/create-post/">Create Post</a>
+            <a href="/logout/">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h1>{{ post.title }}</h1>
+            <p>By {{ post.author.username }} | {{ post.created_at }}</p>
+            <p>{{ post.content }}</p>
+        </article>
+        {% if request.user == post.author %}
+            <a href="/edit-post/{{ post.id }}/">Edit Post</a>
+            <a href="/delete-post/{{ post.id }}/" onclick="return confirm('Are you sure?')">Delete Post</a>
+        {% endif %}
+    </main>
+</body>
+</html>

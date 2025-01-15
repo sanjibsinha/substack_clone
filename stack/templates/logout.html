@@ -11,29 +11,15 @@
         <nav>
             <a href="/">Home</a>
             <a href="/subscribe/">Subscribe</a>
-            <a href="/login/">Login</a>
-            <a href="/register/">Register</a>
-            <a href="{% url 'logout' %}">Logout</a>
+            <a href="/login/">Login</a>            
         </nav>
     </header>
 
     <main>
         <section class="hero">
-            <h1>Welcome to Substack Clone</h1>
+            <h1>You are logged out, please log in again</h1>
             <p>Read, Write, and Share Stories</p>
             <a href="/subscribe/" class="cta-button">Subscribe Now</a>
-        </section>
-    
-        <section class="posts">
-            <h2>Recent Posts</h2>
-            {% for post in posts %}
-                <article>
-                    <h3>{{ post.title }}</h3>
-                    <p>By {{ post.author.username }} on {{ post.created_at }}</p>
-                    <p>{{ post.content|truncatewords:20 }}</p>
-                    <a href="/post/{{ post.id }}/">Read More</a>
-                </article>
-            {% endfor %}
         </section>
     </main>
 

@@ -21,5 +21,15 @@ from stack import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
+    path('subscribe/', views.subscribe, name='subscribe'),
+    path('login/', views.login_view, name='login'),
+    path('logout/', views.logout_view, name='logout'),
+    path('register/', views.register_view, name='register'),
+    path('create-post/', views.create_post, name='create_post'),
+    path('post/<int:post_id>/', views.post_detail, name='post_detail'),
+    path('edit-post/<int:post_id>/', views.edit_post, name='edit_post'),
+    path('delete-post/<int:post_id>/', views.delete_post, name='delete_post'),
+    path('dashboard/', views.user_dashboard, name='user_dashboard'),
+    path('profile/', views.profile_view, name='profile'),
 
 ]
